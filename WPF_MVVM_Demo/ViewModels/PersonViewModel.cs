@@ -16,9 +16,9 @@ namespace WPF_MVVM_Demo.ViewModels
             get { return string.Concat(_person.LastName, ", ", _person.FirstName); }
         }
 
-        public PersonViewModel()
+        public PersonViewModel(Person person)
         {
-            _person = new Person("John", "Doe");
+            _person = person;
         }
     }
 }

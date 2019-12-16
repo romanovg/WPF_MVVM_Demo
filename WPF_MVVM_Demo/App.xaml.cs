@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WPF_MVVM_Demo.Models;
 using WPF_MVVM_Demo.ViewModels;
 
 namespace WPF_MVVM_Demo
@@ -18,7 +19,7 @@ namespace WPF_MVVM_Demo
         {
             MainWindow window = new MainWindow();
             window.Show();
-            window.Content = new PersonViewModel();
+            window.Content = new PersonViewModel(new Person("John", "Doe"));
         }
     }
 }
