@@ -6,8 +6,4 @@
         xmlns:local="clr-namespace:WPF_MVVM_Demo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
-        <TextBlock Text="Full name: "/>
-        <TextBlock Text="{Binding Source={StaticResource SomePerson}, Path=FullName}"/>
-    </DockPanel>
 </Window>
