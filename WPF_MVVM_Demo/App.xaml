@@ -2,8 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPF_MVVM_Demo"
+             xmlns:vm="clr-namespace:WPF_MVVM_Demo.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <vm:PersonViewModel x:Key="SomePerson"/>
     </Application.Resources>
 </Application>
