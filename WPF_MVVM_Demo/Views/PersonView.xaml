@@ -7,7 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="20" d:DesignWidth="200">
     <DockPanel>
-        <TextBlock Text="Full name: "/>
         <TextBlock Text="{Binding FullName}"/>
     </DockPanel>
 </UserControl>

@@ -4,10 +4,14 @@
              xmlns:local="clr-namespace:WPF_MVVM_Demo"
              xmlns:vm="clr-namespace:WPF_MVVM_Demo.ViewModels"
              xmlns:views="clr-namespace:WPF_MVVM_Demo.Views"
-             Startup="Application_Startup">
+             Startup="Application_Startup"
+             Exit="Application_Exit">
     <Application.Resources>
         <DataTemplate DataType="{x:Type vm:PersonViewModel}">
             <views:PersonView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PersonListViewModel}">
+            <views:PersonListView/>
         </DataTemplate>
     </Application.Resources>
 </Application>
