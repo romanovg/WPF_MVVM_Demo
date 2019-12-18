@@ -1,16 +1,17 @@
-﻿using System;
+﻿using Prism.Commands;
+using Prism.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using WPF_MVVM_Demo.Helpers;
 using WPF_MVVM_Demo.Models;
 
 namespace WPF_MVVM_Demo.ViewModels
 {
-    public class PersonListViewModel : BaseViewModel
+    public class PersonListViewModel : BindableBase
     {
         private List<Person> _people;
 
@@ -51,7 +52,7 @@ namespace WPF_MVVM_Demo.ViewModels
         public PersonListViewModel(List<Person> people)
         {
             _people = people;
-            AddNewPersonCommand = new RelayCommand(_ => AddPerson(), _ => CanAddPerson);
+            AddNewPersonCommand = new DelegateCommand(AddPerson).ObservesCanExecute(() => CanAddPerson);
         }
 
         private void AddPerson()
